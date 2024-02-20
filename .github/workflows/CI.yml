@@ -21,6 +21,8 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '21'
+          cache: 'maven'
+          cache-dependency-path: 'backend/pom.xml'
 
       - name: Build with Maven
         working-directory: ./backend
