@@ -32,4 +32,7 @@ public class StudentService {
         }
     }
 
+    public String getStudentSecret(String studentId) {
+        return studentRepository.findStudentSecretById(studentId).orElseThrow(StudentNotFoundException::new);
+    }
 }
