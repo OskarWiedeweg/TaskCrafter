@@ -9,10 +9,11 @@ import org.springframework.stereotype.Service;
 public class StudentService {
 
     private final StudentRepository studentRepository;
+    private final IdGenerator idGenerator;
 
     public void createStudent(String name) {
         Student newStudent = Student.builder()
-                .id(IdGenerator.generateId(Student.ID_PREFIX))
+                .id(idGenerator.generateId(Student.ID_PREFIX))
                 .name(name)
                 .build();
 
