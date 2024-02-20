@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/local
+    username: user
+    password: pw
+    driver-class-name: org.postgresql.Driver
+  application:
+    name: TaskCrafter Local
