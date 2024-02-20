@@ -18,4 +18,7 @@ public class StudentRepository {
         );
     }
 
+    public boolean updateStudentSecret(String studentId, String newSecret) {
+        return jdbcTemplate.update("update students set secret = ? where id = ?", newSecret, studentId) != 0;
+    }
 }
